@@ -1,0 +1,17 @@
+{
+    "name": "RoomEscape",
+    "rootNamespace": "",
+    "references": [
+        "AYellowpaper.SerializedCollections.Editor",
+        "AYellowpaper.SerializedCollections"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}
