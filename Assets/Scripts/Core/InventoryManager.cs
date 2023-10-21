@@ -65,15 +65,69 @@ public class InventoryManager : MonoBehaviour {
             }
             subItems[mainIndex][subIndex] = itemId;
         }
-        mainInventoryBar.UpdateTextures(mainItems);   
+        mainInventoryBar.UpdateTextures(mainItems); 
     }
 
     public string GetActiveItem() {
-        return "";
+        return activeItem;
     }
 
     public bool UseActiveItem() {
-        return false;
+        string mainItemId = "";
+        string subItemId = "";
+        if(registry.IsMainItem(activeItem)) {
+            mainItemId = activeItem;
+        } else if(registry.IsSubItem(activeItem)) {
+            mainItemId = registry.GetMainItemId(activeItem);
+            subItemId = activeItem;
+        }
+
+        int mainIndex = -1;
+        for(int i = 0; i < mainItems.Length; i++) {
+            if(mainItems[i] == mainItemId) {
+                mainIndex = i;
+                break;
+            }
+        }
+
+        if(mainIndex == -1) {
+            Debug.Log("Item not found");
+            return false;
+        }
+
+        if(subItemId != "") {
+           int subIndex = -1;
+            for(int j = 0; j < subItems[mainIndex].Length; j++) {
+                if(subItems[mainIndex][j] == subItemId) {
+                    subIndex = j;
+                    break;
+                }
+            }
+            if(subIndex == -1) {
+                Debug.Log("Item not found");
+                return false;
+            }
+
+            for(int i = subIndex; i < subItems[mainIndex].Length - 1; i++) {
+                subItems[mainIndex][i] = subItems[mainIndex][i + 1];
+            }
+            subItems[mainIndex][subItems[mainIndex].Length - 1] = "";
+        }
+
+        if(subItemId == "" || subItems[mainIndex][0] == "" || subItemId == null || subItems[mainIndex][0] == null) {
+            for(int i = mainIndex; i < mainItems.Length - 1; i++) {
+                mainItems[i] = mainItems[i + 1];
+                subItems[i] = subItems[i + 1];
+            }
+            mainItems[mainItems.Length - 1] = "";
+            subItems[subItems.Length - 1] = new string[6];
+        }
+
+        mainInventoryBar.UpdateTextures(mainItems);
+        OnActiveItemChanged("");
+        mainInventoryBar.UnselectSlot();
+
+        return true;
     }
 
     public void OnActiveItemChanged(string itemId) {

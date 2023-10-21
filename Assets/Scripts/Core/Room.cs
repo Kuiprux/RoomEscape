@@ -14,11 +14,11 @@ public class Room : MonoBehaviour
     [SerializedDictionary("Direction", "Room ID")]
     public SerializedDictionary<Direction, string> AdjecentRooms;
 
-    void Start() {
+    public void Start() {
         foreach(Transform child in transform) {
-            DroppedItem droppedItem = child.GetComponent<DroppedItem>();
-            if(droppedItem != null) {
-                droppedItem.room = gameObject;
+            RoomPart roomPart = child.GetComponent<RoomPart>();
+            if(roomPart != null) {
+                roomPart.room = this;
             }
         }
     }

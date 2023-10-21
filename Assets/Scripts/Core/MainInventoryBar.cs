@@ -23,4 +23,9 @@ public class MainInventoryBar : InventoryBar
             inventoryManager.OnActiveItemChanged(itemids[index]);
         }
     }
+
+    public void UnselectSlot() {
+        SelectSlot(-1);
+        subInventoryBar.SelectSlot(-1);
+    }
 }

@@ -30,7 +30,7 @@ public abstract class InventoryBar : MonoBehaviour
         this.itemids = itemids;
         for(int i = 0; i < slotCount; i++) {
             //Debug.Log(itemids[i]);
-            if(itemids[i] == "") {
+            if(itemids[i] == "" || itemids[i] == null) {
                 slots[i].SetItem(false, null);
             } else if(registry.IsMainItem(itemids[i])) {
                 slots[i].SetItem(registry.hasSubItems(itemids[i]), registry.GetItemTexture(itemids[i]));
