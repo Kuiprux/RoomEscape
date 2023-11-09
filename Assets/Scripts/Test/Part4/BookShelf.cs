@@ -11,9 +11,10 @@ public class BookShelf : MonoBehaviour
     {
         if (move)
         {
-            if (transform.position.x > 780)
+            Debug.Log(transform.position.x);
+            if (transform.position.x > 1350)
             {
-                transform.position = transform.position + Vector3.left * 0.07f;
+                transform.position = transform.position + Vector3.left * 0.3f;
             }
         }
     }
