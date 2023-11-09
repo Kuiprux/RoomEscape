@@ -6,19 +6,19 @@ using UnityEngine;
 
 public class Button : MonoBehaviour
 {
-    List<bool> button_blue = new List<bool>();  
+    List<bool> button_blue = new List<bool>();
     List<bool> button_red = new List<bool>();
     List<bool> button_yellow = new List<bool>();
     List<bool> button_purple = new List<bool>();
 
     int[] blue_button_exact = { 0, 1, 2, 3, 4, 5, 6 }; //8 ¼¼±×¸ÕÆ® Á¤´ä
-    int[] blue_button_react = {3,1,0,6,5,4,4,4 }; // ¹Ý³³ÇÔ -> 6 {0,1,3,4,5,6}
+    int[] blue_button_react = { 3, 1, 0, 6, 5, 4, 4, 4 }; // ¹Ý³³ÇÔ -> 6 {0,1,3,4,5,6}
     int[] red_button_exact = { 1, 2, 3, 4, 6 };   //3
-    int[] red_button_react = { 0, 4, 2, 1, 6, 3, 5}; // ¹Ý³³ÇÔ -> 2 {1,2,4,5,6 }
+    int[] red_button_react = { 0, 4, 2, 1, 6, 3, 5 }; // ¹Ý³³ÇÔ -> 2 {1,2,4,5,6 }
     int[] yellow_button_exact = { 0, 2, 3, 6 };  //4
-    int[] yellow_button_react = {2, 4, 3, 2, 5, 0, 3 }; // ¹Ý³³ÇÔ -> 1 {2, 3}
+    int[] yellow_button_react = { 2, 4, 3, 2, 5, 0, 3 }; // ¹Ý³³ÇÔ -> 1 {2, 3}
     int[] purple_button_exact = { 2, 3 };  //1
-    int[] purple_button_react = { 5, 5, 0, 0, 5, 5, 5}; // ¹Ý³³ÇÔ -> 5 {0,1,3,4,6}
+    int[] purple_button_react = { 5, 5, 0, 1, 5, 5, 5 }; // ¹Ý³³ÇÔ -> 8 {0,1,3,4,6}
 
     //public List<GameObject> return_button_blue = new List<GameObject>();
     //public List<GameObject> return_button_red = new List<GameObject>();
@@ -30,15 +30,15 @@ public class Button : MonoBehaviour
 
     bool OnOff(List<bool> button, int n)     //¹öÆ°ÀÌ ÄÑÁ®ÀÖ´ÂÁö ¾Æ´ÑÁö 
     {
-        if( button[n] == false) { return true; }
-        else {  return false; }
+        if (button[n] == false) { return true; }
+        else { return false; }
 
     }
 
     public void ClickButton_Blue(int n)
     {
         button_blue[n] = OnOff(button_blue, n);
-        return_button_react[blue_button_react[n]].SetActive( button_blue[n]);
+        return_button_react[blue_button_react[n]].SetActive(button_blue[n]);
 
     }
     public void ClickButton_Red(int n)
@@ -50,19 +50,23 @@ public class Button : MonoBehaviour
     public void ClickButton_Yellow(int n)
     {
         button_yellow[n] = OnOff(button_yellow, n);
-        return_button_react[yellow_button_react[n]].SetActive(OnOff(button_yellow, n));
+        return_button_react[yellow_button_react[n]].SetActive(button_yellow[n]);
 
     }
     public void ClickButton_Purple(int n)
     {
+        for (int i = 2; i < 7; i++)
+        {
+            return_button_react[i].SetActive(true);
+        }
         button_purple[n] = OnOff(button_purple, n);
-        return_button_react[purple_button_react[n]].SetActive(OnOff(button_purple, n));
+        return_button_react[purple_button_react[n]].SetActive(button_purple[n]);
     }
 
     // Start is called before the first frame update
     void Start()
     {
-        for( int i = 0; i < 7; i++)
+        for (int i = 0; i < 7; i++)
         {
             button_blue.Add(false);
             button_red.Add(false);
@@ -70,7 +74,7 @@ public class Button : MonoBehaviour
             button_purple.Add(false);
         }
 
-        for ( int i = 0; i < 7; i++)
+        for (int i = 0; i < 7; i++)
         {
             return_button_react[i].SetActive(false);
         }
@@ -79,30 +83,30 @@ public class Button : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-    //    List<int> result = Segment(button_blue);
-    //    Debug.Log("Segment(button_blue): " + string.Join(", ", result));
+        //    List<int> result = Segment(button_blue);
+        //    Debug.Log("Segment(button_blue): " + string.Join(", ", result));
 
-    //    if (Enumerable.SequenceEqual(red_button_exact, Segment(button_red)))
-    //    {
-    //        return_button.SetActive(false);
-    //        return_Image.SetActive(true);
-    //    }
-    //    if (Enumerable.SequenceEqual(blue_button_exact, Segment(button_blue)))
-    //    {
-    //        print("Hellow");
-    //        return_button.SetActive(false);
-    //        return_Image.SetActive(true);
-    //    }
-    //    if (Enumerable.SequenceEqual(yellow_button_exact, Segment(button_yellow)))
-    //    {
-    //        return_button.SetActive(false);
-    //        return_Image.SetActive(true);
-    //    }
-    //    if (Enumerable.SequenceEqual(purple_button_exact, Segment(button_purple)))
-    //    {
-    //        return_button.SetActive(false);
-    //        return_Image.SetActive(true);
-    //    }
+        //    if (Enumerable.SequenceEqual(red_button_exact, Segment(button_red)))
+        //    {
+        //        return_button.SetActive(false);
+        //        return_Image.SetActive(true);
+        //    }
+        //    if (Enumerable.SequenceEqual(blue_button_exact, Segment(button_blue)))
+        //    {
+        //        print("Hellow");
+        //        return_button.SetActive(false);
+        //        return_Image.SetActive(true);
+        //    }
+        //    if (Enumerable.SequenceEqual(yellow_button_exact, Segment(button_yellow)))
+        //    {
+        //        return_button.SetActive(false);
+        //        return_Image.SetActive(true);
+        //    }
+        //    if (Enumerable.SequenceEqual(purple_button_exact, Segment(button_purple)))
+        //    {
+        //        return_button.SetActive(false);
+        //        return_Image.SetActive(true);
+        //    }
 
     }
 
