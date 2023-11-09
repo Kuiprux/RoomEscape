@@ -18,4 +18,12 @@ public class MainRoom1 : Room
             transform.Find("obj_light").gameObject.SetActive(true);
         }
     }
+
+    public void GotoDate() {
+        gameManager.ChangeRoom("Rebox_date");
+    }
+
+    public void GotoCart() {
+        gameManager.ChangeRoom("Rebox_cart");
+    }
 }
