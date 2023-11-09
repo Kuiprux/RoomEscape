@@ -11,8 +11,6 @@ public class InventoryManager : MonoBehaviour {
 
     public string activeItem = "";
 
-    public GameObject subItemPanel;
-
     void Start() {
         for(int i = 0; i < 6; i++) {
             subItems[i] = new string[6];
