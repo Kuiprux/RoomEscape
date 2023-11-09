@@ -5,7 +5,10 @@ using UnityEngine;
 public class MainRoom2 : Room
 {
     // Start is called before the first frame update
-
+    new void Start()
+    {
+        base.Start();
+    }
 
     // Update is called once per frame
     void Update()

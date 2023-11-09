@@ -7,6 +7,12 @@ using UnityEngine;
 public class MainRoom4 : Room
 {
     public BookShelf bookshelf;
+    
+    new void Start()
+    {
+        base.Start();
+    }
+
 
     public void clear()
     {

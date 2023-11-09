@@ -4,6 +4,12 @@ using UnityEngine;
 
 public class MainRoom1 : Room
 {
+
+    new void Start()
+    {
+        base.Start();
+    }
+
     public void useCard()
     {
         if (inventoryManager.GetActiveItem() == "card")
