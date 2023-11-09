@@ -6256,7 +6256,7 @@ MonoBehaviour:
       Value: main_room3
     - Key: 3
       Value: main_room1
-  bookshelf: {fileID: 0}
+  bookshelf: {fileID: 3787914516347116202}
 --- !u!114 &1904964725
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6277,7 +6277,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: cf4b653192b19224691874e21930cfea, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 197a7a5d361eb2947b8e44fb27db0383, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -6921,7 +6921,7 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 0}
+        - m_Target: {fileID: 1904964724}
           m_TargetAssemblyTypeName: MainRoom4, RoomEscape
           m_MethodName: MoveHidden
           m_Mode: 1
@@ -7090,7 +7090,7 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 0}
+        - m_Target: {fileID: 1904964724}
           m_TargetAssemblyTypeName: MainRoom4, RoomEscape
           m_MethodName: MoveBox
           m_Mode: 1
@@ -16567,7 +16567,7 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 0}
+        - m_Target: {fileID: 634755339}
           m_TargetAssemblyTypeName: MainRoom1, RoomEscape
           m_MethodName: useCard
           m_Mode: 1
@@ -16695,7 +16695,7 @@ MonoBehaviour:
     _serializedList:
     - Key: 1
       Value: main_room4
-  room4: {fileID: 0}
+  room4: {fileID: 1904964724}
   piece1: 
   piece2: 
   getNone: {fileID: 21300000, guid: 7ba5648e0547fd846903ab02a10bfc0b, type: 3}
@@ -16749,7 +16749,7 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 0}
+        - m_Target: {fileID: 8512531502450176029}
           m_TargetAssemblyTypeName: MainRoom3, RoomEscape
           m_MethodName: MoveNews
           m_Mode: 1
@@ -17992,7 +17992,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!222 &6054472586376079509
 CanvasRenderer:
   m_ObjectHideFlags: 0
