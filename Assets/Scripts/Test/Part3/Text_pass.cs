@@ -38,7 +38,7 @@ public class Text_pass : MonoBehaviour
     }
 
     public void Check(){
-        if(number=="1234"){
+        if(number=="1234"){ //1234 대신에 사용할 비밀번호로만 교체
             ScriptText.text="Clear";
             flag=true;
         }
