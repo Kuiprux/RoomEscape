@@ -5,7 +5,7 @@ using UnityEngine;
 public class Room3_PC : Room
 {
     // Start is called before the first frame update
-    void Start()
+    new void Start()
     {
         base.Start();
     }

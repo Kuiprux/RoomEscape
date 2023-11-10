@@ -5,7 +5,7 @@ using UnityEngine;
 public class rebox_cart : Room
 {
     // Start is called before the first frame update
-    void Start()
+    new void Start()
     {
         base.Start();   
     }

@@ -10,7 +10,7 @@ public class Room2_Picture : Room
     public int find;
     
     // Start is called before the first frame update
-    void Start()
+    new void Start()
     {
         base.Start();
         rigid_memo = GameObject.Find("Memo").GetComponent<Rigidbody2D>();

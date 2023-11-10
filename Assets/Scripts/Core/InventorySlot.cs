@@ -1,7 +1,3 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
-using Codice.Client.GameUI.Update;
 using UnityEngine;
 using UnityEngine.UI;
 

@@ -1,7 +1,4 @@
-using Codice.Client.BaseCommands.Differences;
-using System.Collections;
 using System.Collections.Generic;
-using System.Linq;
 using UnityEngine;
 
 public class Button : MonoBehaviour
@@ -11,14 +8,14 @@ public class Button : MonoBehaviour
     List<bool> button_yellow = new List<bool>();
     List<bool> button_purple = new List<bool>();
 
-    int[] blue_button_exact = { 0, 1, 2, 3, 4, 5, 6 }; //8 ¼¼±×¸ÕÆ® Á¤´ä
-    int[] blue_button_react = { 3, 1, 0, 6, 5, 4, 4, 4 }; // ¹Ý³³ÇÔ -> 6 {0,1,3,4,5,6}
+    int[] blue_button_exact = { 0, 1, 2, 3, 4, 5, 6 }; //8 ï¿½ï¿½ï¿½×¸ï¿½Æ® ï¿½ï¿½ï¿½ï¿½
+    int[] blue_button_react = { 3, 1, 0, 6, 5, 4, 4, 4 }; // ï¿½Ý³ï¿½ï¿½ï¿½ -> 6 {0,1,3,4,5,6}
     int[] red_button_exact = { 1, 2, 3, 4, 6 };   //3
-    int[] red_button_react = { 0, 4, 2, 1, 6, 3, 5 }; // ¹Ý³³ÇÔ -> 2 {1,2,4,5,6 }
+    int[] red_button_react = { 0, 4, 2, 1, 6, 3, 5 }; // ï¿½Ý³ï¿½ï¿½ï¿½ -> 2 {1,2,4,5,6 }
     int[] yellow_button_exact = { 0, 2, 3, 6 };  //4
-    int[] yellow_button_react = { 2, 4, 3, 2, 5, 0, 3 }; // ¹Ý³³ÇÔ -> 1 {2, 3}
+    int[] yellow_button_react = { 2, 4, 3, 2, 5, 0, 3 }; // ï¿½Ý³ï¿½ï¿½ï¿½ -> 1 {2, 3}
     int[] purple_button_exact = { 2, 3 };  //1
-    int[] purple_button_react = { 5, 5, 0, 1, 5, 5, 5 }; // ¹Ý³³ÇÔ -> 8 {0,1,3,4,6}
+    int[] purple_button_react = { 5, 5, 0, 1, 5, 5, 5 }; // ï¿½Ý³ï¿½ï¿½ï¿½ -> 8 {0,1,3,4,6}
 
     //public List<GameObject> return_button_blue = new List<GameObject>();
     //public List<GameObject> return_button_red = new List<GameObject>();
@@ -28,7 +25,7 @@ public class Button : MonoBehaviour
 
 
 
-    bool OnOff(List<bool> button, int n)     //¹öÆ°ÀÌ ÄÑÁ®ÀÖ´ÂÁö ¾Æ´ÑÁö 
+    bool OnOff(List<bool> button, int n)     //ï¿½ï¿½Æ°ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ö´ï¿½ï¿½ï¿½ ï¿½Æ´ï¿½ï¿½ï¿½ 
     {
         if (button[n] == false) { return true; }
         else { return false; }
