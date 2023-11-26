@@ -9854,7 +9854,7 @@ MonoBehaviour:
   LoginView: {fileID: 2597186413742749607}
   Warning: {fileID: 2597186413763622833}
   inputField_Pw: {fileID: 2597186413437406611}
-  password: 2816
+  password: 1028
 --- !u!224 &2597186413763622832
 RectTransform:
   m_ObjectHideFlags: 0
