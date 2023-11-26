@@ -72,7 +72,7 @@ public class BoxProblem : Room
 
     public void check()
     {
-        if (piece1 == "top2" && piece2 == "bottom4")
+        if (piece1 == "top1" && piece2 == "bottom4")
         {
             Debug.Log("Correct!");
 
