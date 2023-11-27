@@ -52,4 +52,14 @@ public abstract class InventoryBar : MonoBehaviour
         if(selectedIndex != -1)
             slots[selectedIndex].SetSelected(true);
     }
+
+    public void SelectSlotByItemID(string itemid) {
+        for(int i = 0; i < slotCount; i++) {
+            if(itemids[i] == itemid) {
+                SelectSlot(i);
+                return;
+            }
+        }
+        SelectSlot(-1);
+    }
 }

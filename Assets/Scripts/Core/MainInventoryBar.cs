@@ -7,6 +7,7 @@ public class MainInventoryBar : InventoryBar
     public SubInventoryBar subInventoryBar;
     public override void OnSlotHovered(int index, bool isHovered) {
         subInventoryBar.UpdateTextures(inventoryManager.subItems[index]);
+        subInventoryBar.SelectSlotByItemID(inventoryManager.GetActiveItem());
 
         if(registry.hasSubItems(itemids[index]))
             subInventoryBar.SetTriggererHovered(isHovered);
