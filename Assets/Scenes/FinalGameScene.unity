@@ -650,9 +650,7 @@ MonoBehaviour:
   gameManager: {fileID: 0}
   inventoryManager: {fileID: 0}
   AdjecentRooms:
-    _serializedList:
-    - Key: 1
-      Value: main_room1
+    _serializedList: []
 --- !u!114 &168614557
 MonoBehaviour:
   m_ObjectHideFlags: 0
